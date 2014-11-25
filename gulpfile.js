@@ -4,6 +4,12 @@ var gulp = require('gulp');
 
 gulp.task('rimraf', require('./task/rimraf'));
 
+gulp.task('jest', require('./task/jest').run);
+gulp.task('jest:watch', require('./task/jest').watch);
+
+gulp.task('flow', require('./task/flow').run);
+gulp.task('flow:watch', require('./task/flow').watch);
+
 gulp.task('assets', require('./task/assets').run);
 gulp.task('assets:watch', require('./task/assets').watch);
 gulp.task('assets:build', require('./task/assets').build);
