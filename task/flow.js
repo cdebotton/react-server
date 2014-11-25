@@ -30,7 +30,7 @@ function TypeChecker(watch) {
     ], run);
   }
 
-  return run();
+  return run;
 }
 
 module.exports.run    = TypeChecker.bind(TypeChecker, false);

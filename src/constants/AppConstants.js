@@ -12,6 +12,9 @@ var AppConstants = {
   }),
 
   ActionTypes: keyMirror({
-
+    FOO           : null,
+    BAR           : null
   })
 };
+
+module.exports = AppConstants;
