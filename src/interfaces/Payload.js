@@ -2,5 +2,5 @@
 
 declare class Payload {
   source: String;
-  action: Object;
+  action: Action;
 }
