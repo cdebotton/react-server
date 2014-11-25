@@ -11,11 +11,15 @@ var CHANGE_EVENT = 'change';
 var Store = extend(EventEmitter.prototype, {
   StoreMixin: {
     componentDidMount() {
-      Store.addChangeListener(callback);
+      Store.addChangeListener(this.handleChange);
     },
 
     componentWillUnmount() {
-      Store.removeChangeListener(callback);
+      Store.removeChangeListener(this.handleChange);
+    },
+
+    handleChange() {
+      console.log(CHANGE_EVENT);
     }
   },
 
@@ -27,8 +31,8 @@ var Store = extend(EventEmitter.prototype, {
     this.on(CHANGE_EVENT, callback);
   },
 
-  removeListener(callback: Function) {
-    this.off(CHANGE_EVENT, callback);
+  removeChangeListener(callback: Function) {
+    this.removeListener(CHANGE_EVENT, callback);
   }
 });
 
