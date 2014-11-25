@@ -7,6 +7,7 @@
 
 var React           = require('react');
 var {RouteHandler}  = require('react-router');
+var {StoreMixin}    = require('../stores/Store');
 
 function getStylesheet(env) {
   var src = env === 'production'
@@ -31,6 +32,8 @@ function getLivereload(env) {
 }
 
 var App = React.createClass({
+  mixins: [StoreMixin],
+
   propTypes: {
     env: React.PropTypes.string.isRequired
   },
