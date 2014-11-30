@@ -1,5 +1,5 @@
 /** @flow */
 
-declare module 'events' {
-  declare function EventEmitter() {};
+declare module 'events.js' {
+  declare function EventEmitter(): any;
 }

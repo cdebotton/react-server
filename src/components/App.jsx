@@ -38,11 +38,11 @@ var App = React.createClass({
     env: React.PropTypes.string.isRequired
   },
 
-  getDefaultProps() {
+  getDefaultProps(): Object {
     return {env: 'development'};
   },
 
-  render() {
+  render(): any {
     var {env} = this.props;
 
     return (

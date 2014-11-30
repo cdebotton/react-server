@@ -4,16 +4,16 @@
  * @jsx
  */
 
-var AuthStore = require('../stores/AuthStore');
+// var AuthStore = require('../stores/AuthStore');
 
-var ProtectedRoute = {
-  statics: {
-    willTransitionTo: function(transition: Transition, params: Object) {
-      if (! AuthStore.isLoggedIn()) {
-        transition.redirect('login');
-      }
-    }
-  }
-};
+// var ProtectedRoute = {
+//   statics: {
+//     willTransitionTo: function(transition: Transition, params: Object) {
+//       if (! AuthStore.isLoggedIn()) {
+//         transition.redirect('login');
+//       }
+//     }
+//   }
+// };
 
-module.exports = ProtectedRoute;
+// module.exports = ProtectedRoute;

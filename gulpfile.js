@@ -25,8 +25,8 @@ gulp.task('browserify:build', require('./task/browserify').build);
 gulp.task('express:dev', require('./task/express').development);
 gulp.task('express:prd', require('./task/express').production);
 
-gulp.task('test', ['jest']);
+gulp.task('test', ['flow', 'jest']);
 gulp.task('build', ['assets:build', 'browserify:build', 'stylus:build']);
 gulp.task('serve', ['build', 'express:prd']);
-gulp.task('watch', ['assets:watch', 'express:dev', 'browserify:watch', 'stylus:watch', 'jest:watch']);
-gulp.task('default', ['assets', 'browserify', 'stylus', 'jest']);
+gulp.task('watch', ['flow:watch', 'assets:watch', 'express:dev', 'browserify:watch', 'stylus:watch', 'jest:watch']);
+gulp.task('default', ['flow', 'assets', 'browserify', 'stylus', 'jest']);

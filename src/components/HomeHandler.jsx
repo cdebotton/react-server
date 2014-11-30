@@ -6,7 +6,7 @@
 var React = require('react');
 
 var HomeHandler = React.createClass({
-  render() {
+  render(): any {
     return (
       <div className="home-handler">
         <h2>Home</h2>
